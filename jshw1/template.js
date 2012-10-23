@@ -66,32 +66,27 @@ $(function(){
 		{
 			if(delwhat=='a')
 			{
-				console.log('These are the animals: ' + animals);
-				var delanimal = prompt('Which animal do you want to delete?');
-				animals.splice(delanimal);
-
-				console.log('These are the animals now: ' + animals);
-
+				console.log('Animals: ' + animals);
+				var del = prompt('Which one do you want to delete?');
+				var index = animals.indexOf(del);
+				animals.splice(index,1);	
 			}	
 
 			else if (delwhat=='c')
 			{
 
-				console.log('These are the colors: ' + colors);
-				var delcolor = prompt('Which color do you want to delete?');
-				colors.splice(delcolor);
-
-				console.log('These are the colors now: ' + colors);
-
+				console.log('Colors: ' + colors);
+				var del = prompt('Which one do you want to delete?');
+				var index = colors.indexOf(del);
+				colors.splice(index,1);		
 			}
 
 			else if (delwhat=='p')
 			{
-				console.log('These are the people: ' + people);
-				var delperson = prompt('Which person do you want to delete?');
-				people.splice(delperson);
-
-				console.log('These are the colors now: ' + people);
+				console.log('People: ' + people);
+				var del = prompt('Which one do you want to delete?');
+				var index = people.indexOf(del);
+				people.splice(index,1);	
 
 			}
 
