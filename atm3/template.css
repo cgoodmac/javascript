@@ -23,7 +23,7 @@ h1 {
 	margin: 20px;
 }
 
-#cashwrapper-checking {
+.cashwrapper {
 	padding: 10px;
 	border: 2px #EBEBEB solid;
 }
