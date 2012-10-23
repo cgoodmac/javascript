@@ -1,0 +1,29 @@
+* {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+#container {
+	width: 400px;
+	padding: 20px;
+	margin: auto;
+	border: 2px #EBEBEB solid;
+}
+
+h1 {
+	background: url('images/ga-logo.jpg');
+	width: 200px;
+	height: 235px;
+	margin: auto;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box {
+	margin: 20px;
+}
+
+#cashwrapper {
+	padding: 10px;
+	border: 2px #EBEBEB solid;
+}

@@ -1,0 +1,17 @@
+DOM is the TREE
+
+HTML
+|
+|\
+|  \
+|   \
+|    \
+|     \	
+Head    Body
+|\			| \ 
+| \		    |  \
+|  \       Div  span, etc.
+|   \
+Title Link
+
+jQuery lets you select a node in the tree and do something to it
