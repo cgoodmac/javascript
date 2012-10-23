@@ -15,3 +15,51 @@ Head    Body
 Title Link
 
 jQuery lets you select a node in the tree and do something to it
+
+Change styles by playing around with classes, don't add individual styles (99% of time use the classes)
+
+addClass
+removeClass
+toggleClass
+hasClass
+
+Add stuff:
+
+$('#d3').before('<p>hello</p>');
+$('#d3').after('<span>hello</span>');
+$('#d3').prepend('<h1>xyz</h1>');
+	=> places at top of inside of element
+$('#d3').append('<h3>abc</h3>');
+	=> places at bottom of inside of element
+
+DOM
+
+*IMPORTANT*
+
+body
+/|\
+d1		d2		d3
+
+$('<p>'); <= creates a p tag
+var p1 = $('<p>');
+ 
+ *Created p tag is not attached to the tree at all*
+
+d1.append(p1);
+
+You can detach elements from DOM
+
+d1.detach();
+
+then you can "append" a detached item anywhere else you need
+
+*IMPORTANT*
+
+How to find things that have been dynamically inserted and click or hover or doubleclick
+
+Usually if dynamically inserted, can't hover, click, etc.
+
+Use "on" function
+
+Pick the closest static thing
+
