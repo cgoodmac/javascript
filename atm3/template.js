@@ -15,7 +15,6 @@ $(function(){
 
 	function dep()
 	{
-
 	var amount = $('#amount-checking').val();
 	amount = parseInt(amount);	
 
@@ -25,13 +24,12 @@ $(function(){
 
 	function wd()
 	{
-	amount = $('#amount-checking').val();
+	var amount = $('#amount-checking').val();
 	amount = parseInt(amount);	
 
 	if(amount<=balance_checking)
 	{
 		balance_checking = balance_checking-amount;
-		
 	}	
 	else if(amount<=(balance_checking+balance_savings))
 	{
@@ -54,12 +52,11 @@ $(function(){
 	balance_savings= parseInt(balance_savings);
 
 	$('#cash-savings').text(balance_savings);
-
 	}
 
 	function wdsavings()
 	{
-	amount = $('#amount-savings').val();
+	var amount = $('#amount-savings').val();
 	amount = parseInt(amount);	
 
 	balance_savings = $('#cash-savings').text();
