@@ -20,8 +20,6 @@ $(function(){
 	amount = parseInt(amount);	
 
 	balance_checking = balance_checking+amount;
-	balance_checking = parseInt(balance_checking);
-
 	$('#cash-checking').text(balance_checking);
 	}
 
@@ -29,9 +27,6 @@ $(function(){
 	{
 	amount = $('#amount-checking').val();
 	amount = parseInt(amount);	
-
-	balance_savings = $('#cash-savings').text();
-	balance_savings = parseInt(balance_savings);
 
 	if(amount<=balance_checking)
 	{
