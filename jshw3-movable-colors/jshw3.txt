@@ -1,0 +1,55 @@
+
+jshw3
+
+1. enter colors, click, boxes show up
+
+take string, make it an array
+
+s= "blue, green, orange"
+s.split(', ');
+["blue", "green", "orange"]
+
+array.length() => how many times you'll loop, length of the array
+
+use hover ON function, get the background color in css, make input box the same color
+
+do the join thing (?) join => creates a string out of array
+
+split creates array out of string
+
+2. target each box you hover over using THIS
+	grab the background-color
+
+	var color = $(this).css('background-color');
+
+	TO GET BACKGROUND COLOR, DON'T GIVE IT A VALUE, IT WILL TELL YOU IT'S VALUE
+
+3. moving stuff around is one line of code	
+
+FIND PREVIOUS ITEM
+var.prev()
+
+FIND NEXT ITEM
+var.next()
+
+THEN USE "BEFORE" AND "AFTER" LIKE "APPEND" AND "PREPEND"
+
+4. create global variable called  var SELECTED = null;
+
+when you're clicking on this, then 
+
+selected = this THIS LET'S YOU REMEMBER SELECTED ITEM
+
+then you can use the arrow keys 
+
+if this ==selected and you click it, selected = null again
+
+LETS YOU UNCLICK
+
+Give border to SELECTED
+
+At most, one SELECTED
+
+5. DOUBLECLICK REMOVES THE BOX TOO
+
+$(this).remove();

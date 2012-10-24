@@ -51,7 +51,7 @@ $(function(){
 	balance_savings= balance_savings+amount;
 	balance_savings= parseInt(balance_savings);
 
-	$('#cash-savings').text(balance_savings);
+	$('#cash-savings').text(balance_savings);		
 	}
 
 	function wdsavings()
