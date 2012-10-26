@@ -1,0 +1,26 @@
+.clear {
+	clear:both;
+}
+
+#bigbox {
+	height: 300px;
+	width: 200px;
+	border: 1px solid black;
+	float: left;
+	margin: 5px;
+}
+
+#colorholder {
+	width: 200px;
+	min-height: 300px;
+	float: left;
+	border: 1px solid black;
+	margin: 5px;
+}
+
+.color {
+	height: 50px;
+	width: 50px;
+	margin: 5px;
+	border: 1px solid black;
+}
