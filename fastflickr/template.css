@@ -1,0 +1,23 @@
+.photo 
+{
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+	border: 1px solid black;
+}
+
+img {
+	width: 150px;
+	height: 150px;
+}
+
+#counter_wrapper {
+	height: 20px;
+	width: 20px;
+	float:left;
+}
+
+.clear {
+	clear: both;
+}

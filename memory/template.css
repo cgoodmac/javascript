@@ -1,0 +1,33 @@
+.sml {
+	float: left;
+	height: 30px;
+	width: 100px;
+	border: 1px solid black;
+	margin: 10px;
+}
+
+#container {
+	width: 400px;
+	margin: auto;
+}
+
+#main {
+
+
+}
+.box {
+	height: 50px;
+	width: 50px;
+	margin: 10px;
+	border: 2px solid black;
+	float: left;
+}
+
+.hidden {
+
+}
+
+.selected {
+	border: 2px solid red;
+
+}

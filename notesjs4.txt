@@ -1,0 +1,112 @@
+RGB
+
+rgba
+
+	rgb runs from 0-255,
+	a is opacity 0-1
+
+hexa decimal
+ 6      10
+
+ base 16
+
+ binary => base 2 0-1
+ decimal => base 10 0-9
+ hexadecimal => base 16 0-9, a-f => 0-FF
+
+Hexadecimal = > 0-9
+
+MODULUS
+
+modulus => %
+ 
+works in all programming languages
+
+it's the remainder of a division
+
+the remainder is NEVER higher than the divisor
+
+need to make number never higher than 255
+
+x % 255 = y => never greater than 255
+
+OBJECTS
+
+instead of separate variables, create one object and put variables in
+
+dog = {} => creates an object
+
+Then you can assign attributes
+dog.name = "fido"
+dog.age = 3
+dog.has_shots = true
+dog.gender = "male"
+dog.fav_foods = ['bacon','gravy','cats'];
+
+person = {} => create a master
+
+dog.master = person <=you can put objects inside of objects
+
+Faster way of creating
+
+cat = {name:'fluffy', age: 4, likes_dogs: false};
+
+it's all like this:
+*** key: value *** 
+keys = properties, 
+values = values
+
+This is Javascript Object Notation => JSON
+
+JSON is how you communicate with web services like twitter, foursquare, flickr, facebook
+
+each has it's own API
+you use JSON to communicate with APIs
+
+FLICK API
+
+per_page (Optional)
+Number of photos to return per page. If this argument is omitted, it defaults to 100. The maximum allowed value is 500.
+
+results => data {} ('data' object)
+data.photos <= array 
+	inside it is arrays called 'photo' for each photo
+
+	data.photos.photo[2] 
+
+		Selects the third photo in the array of photos in the search result
+
+	^ It's a TREE just like the DOM!
+
+Use Flickr + Timer
+
+instead of tags use 'text'
+you can make your search more advanced too if you want
+Get results
+Every second, show a photo from the results
+Prepend so newest photo is first
+Goes to 100, but you can make it up to 500 photos (per page)
+Then go to next page
+
+at index 499 (photo 500), then send flickr another message for page 2 results
+
+var i GLOBAL = setInterval(fn,3000)
+clearInterval(i);
+
+HW
+
+MEMORY
+
+game called Memory, you have a timer
+three board sizes: small, medium, large
+small board has 2 rows of five boxes, medium has 4 rows of 5, large has 8 rows of 5
+letters are under boxes - each letter has one partner
+when you click on a box, you get to click on another box
+if both match, the letters stay face-up
+when you match all, timer stops and color of board ends
+
+the letters HAVE to be randomized
+think back to the code yesterday for box selection
+use data attributes for rows and columns of boxes
+
+

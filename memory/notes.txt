@@ -1,0 +1,3 @@
+NOTES
+
+		selected_box.text(letters[i]);
