@@ -1,11 +1,12 @@
 var boxes
 var letters = ["a","a","b","b","c","c","d","d","e","e"];
 var selected_box = null;
+var letter = null;
 
 $(function(){
 
 	$('.sml').click(generate);
-	$('#main').on('click','.box', pick);
+	$('#main').on('click','.box', pick1);
 
 });
 
@@ -53,7 +54,7 @@ function generate()
 
 }
 
-function pick()
+function pick1()
 {
 	if(selected_box != this)
 	{
@@ -64,6 +65,8 @@ function pick()
 		$(selected_box).addClass('selected');
 		var number = $(selected_box).attr('id');
 		$(selected_box).text(letters[number]);
+
+		var letter = letters[number];
 	}
 	else
 	{
@@ -71,7 +74,18 @@ function pick()
 		$(selected_box).text('');	
 		selected_box = null;
 	}
+
+	pick2();
 }
+
+function pick2()
+{
+
+
+
+
+}
+
 
 //Get THIS and compare currently selected box = results
 

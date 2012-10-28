@@ -1,0 +1,76 @@
+.main {
+     float: left;
+     width: 580px;
+     margin: 25px 20px;
+}
+
+.input {
+     float: left;
+}
+
+.box {
+/*     width: 240px;
+     height: 160px;*/
+     float: left;
+     margin: 15px;
+}
+
+img {
+     height: 150px;
+     width: 150px;
+}
+
+.tagbox {
+     width: 146px;
+     height: 146px;
+     padding: 15px;
+     float: left;
+     border: 2px solid #000;
+     margin: 15px;
+
+}
+
+     .tagbox input {
+          width: 116px;
+     }    
+
+#output {
+     width: 550px;
+}
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/* Center the container */
+#container {
+	width: 1240px;
+	margin: auto;
+}
