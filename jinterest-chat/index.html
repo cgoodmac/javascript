@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+	
+		<title>Jinterest Chat</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="jquery-1.8.2.js"></script>
+		<script src="template.js"></script>
+		<script src="http://www.parsecdn.com/js/parse-1.1.6.min.js"></script>
+	</head>
+	
+	<body>
+		<div id="container" class="clearfix">
+			<header>
+				<h1>Jinterest Chat</h1>
+			</header>			
+			<div class="main" id="left">
+				<div id="control" class="clearfix controls">
+					<input id="search" type="text">
+					<input id="button" type="button" value="Search">
+				</div><!-- #control --> 
+				<h2>Search Results</h2>
+				<div id="output" class="clearfix">
+					
+				</div><!-- #output --> 
+			</div><!-- #left --> 
+
+			<div class="main" id="right">
+				<h2>Pins</h2>
+				<div id="history">
+				</div><!-- #history -->
+			</div><!--#right --> 
+
+			<div id="chatwrapper">
+				<h2>Chat</h2>
+				<div id="chatcontrol" class="controls">
+					<input id="name" type="text" placeholder="Name">
+					<input id="talk" type="text" placeholder="Chat here">
+					<input id="talksubmit" type="button" value="Submit">
+				</div><!-- #chatcontrol --> 
+				<div id="chat">
+
+				<div pub-key="pub-a8e341c1-7b8f-4112-8efb-8639c9fda3f4" sub-key="sub-dd129aee-1fb0-11e2-97b6-b1f605a30606" ssl="off" origin="pubsub.pubnub.com" id="pubnub">
+				</div>
+				<script src="http://cdn.pubnub.com/pubnub-3.1.min.js"></script>
+				</div><!--#chat-->
+			</div><!--#chat-wrapper --> 
+
+			<div class="clear">
+			</div>
+		</div><!-- #container --> 
+	</body>
+</html>

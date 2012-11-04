@@ -1,4 +1,5 @@
 var Picture;
+var name;
 
 $(function (){
 
@@ -9,6 +10,12 @@ $(function (){
 	$('#output').on('click', '.box', enter_tag);
 	Picture = Parse.Object.extend("Picture");
 	$('#output').on('click', '.submit', save_picture);
+	$('#history').on('dblclick','.box img', delete_picture);
+
+	//Chat functions
+
+  	subscribe();
+  	$('#talksubmit').click(talksubmit);
 
 });
 
@@ -66,7 +73,7 @@ function show_success()
 {
 	$('#history').empty();
 	var query = new Parse.Query(Picture);
-	query.ascending("createdAt");
+	query.ascending('createdAt');
 	query.find({
 		success: function(results)
 		{
@@ -74,14 +81,16 @@ function show_success()
 			{
 				var src = results[i].get('nlink');
 				var tag = results[i].get('ntag');
+				var id = results[i].id;
 				var div = $('<div>');
 				div.addClass('box');
 				var img = $('<img>');
 				img.attr('src', src);
 				img.attr('title', tag);
-				console.log(tag);
+				img.attr('id', id);
 				div.append(img);
 				$('#history').prepend(div);
+				console.log(id);
 			}
 
 		},
@@ -91,3 +100,80 @@ function show_success()
 		}
 	});	
 }
+
+function delete_picture()
+{
+	var id = $(this).attr('id');
+	var query = new Parse.Query(Picture);
+	query.get(id, {
+		success: function(id) {
+
+				id.destroy({
+				  	success: function(id) {
+				 			show_success();
+				  	},
+				  	error: function(id, error) {
+				  }
+				});
+
+		},
+		error: function(object, error) {
+
+		}
+
+	});
+
+
+}
+
+// Chat functions
+
+function subscribe()
+{
+    PUBNUB.subscribe({
+    	channel    : "jinterest",      // CONNECT TO THIS CHANNEL.
+    	restore    : false,              // STAY CONNECTED, EVEN WHEN BROWSER IS CLOSED
+                                       // OR WHEN PAGE CHANGES.
+    	callback   : publish_message, // RECEIVED A MESSAGE.
+
+    	disconnect : function() {        // LOST CONNECTION.
+    	console.log('you are disconnecting');
+    	},
+
+    	reconnect  : function() {        // CONNECTION RESTORED.
+        console.log('And we are back!');
+      	},
+
+      	connect    : function() {        // CONNECTION ESTABLISHED.
+        console.log('connected');
+      	}
+  	});
+}
+
+function talksubmit()
+{
+	name = $('#name').val();
+	var talk = $('#talk').val();
+
+	PUBNUB.publish({
+	channel : "jinterest",
+	message : name + ': ' + talk
+	});
+
+}
+
+function publish_message(message)
+{
+	var message = message;
+	var p = $('<p>');
+	p.text(message);
+	$('#chat').prepend(p);
+}
+
+
+
+
+
+
+
+
